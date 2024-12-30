@@ -1,268 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="images/logo192.png" />
+    <link rel="icon" href="images/favicon.ico" />
+    <meta name="description" content="Web site created by Alesha74111" />
+    <title>Lemon Wares</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice-1-module-1 </title>
-</head>
-
-<body>
-    <header>
-        <!--navbar-->
-        <a href="#">
-            <img src="./images/Rectangle 3.svg" alt="logo">
-        </a>
-        <nav>
-            <ul>
-                <li>Our Services</li>
-                <li>About</li>
-                <li>Blog&News</li>
-                <li>Contact</li>
-                <li>Account</li>
-            </ul>
-            <img src="./images/phone.svg" alt="phone">
-            <a href="tel:+2349067322844">+2349067322844</a>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+   <div class="body__wrapper">
+     <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="logo" href="#">
+            <img src="images/logo.svg" alt="logo" />
+          </a>
+          <ul class="menu list">
+            <li class="menu__item menu--services current">
+              <a class="menu__link" href="#">Our Services</a>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Blog&News</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+          </ul>
+          <ul class="menu list">
+            <li class="menu__item"><a class="menu__link" href="#">Account</a></li>
+            <li class="menu__item"><span class="line-vertical"></span></li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--icon" href="tel:+2349067322844">
+                <svg class="menu__link-icon" width="21" height="22">
+                  <use href="images/sprite.svg#phone"></use>
+                </svg>
+                +2349067322844
+              </a>
+            </li>
+          </ul>
         </nav>
+      <nav class="mobile__nav">
+          <a class="logo" href="#">
+            <img src="images/logo.svg" alt="logo" />
+          </a>
+          <a class="menu__link menu__link--icon" href="tel:+2349067322844">
+                <svg class="menu__link-icon" width="21" height="22">
+                  <use href="images/sprite.svg#phone"></use>
+                </svg>
+                +2349067322844
+              </a>
+          <button class="menu-btn" id="menu-btn">
+                <span class="line"></span>
+              <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <ul class="mobile__menu list" id="mobile-menu">
+            <li class="mobile__item">
+              <a class="menu__link" href="#">Our Services</a>
+            </li>
+            <li class="mobile__item"><a class="menu__link" href="#">About</a></li>
+            <li class="mobile__item"><a class="menu__link" href="#">Blog&News</a></li>
+            <li class="mobile__item"><a class="menu__link" href="#">Contact</a></li>
+            <li class="mobile__item"><a class="menu__link" href="#">Account</a></li>
+          </ul>
+      </nav>
+      </div>
     </header>
     <main>
-        <!--hero-->
-        <section class="slider">
-            <article>
-                <ul>
-                    <li>Hosting</li>
-                    <li>Domain</li>
-                    <li>SEO</li>
-                    <li>Email</li>
-                </ul>
-                <h1>Premium Web Hosting for Your Website</h1>
-                <p>Blazing fast web hosting for individuals and businesses of all sizes backed by 24x7x365 Support.</p>
-                <button class="conteined">Create an Account</button>
-                <button class="outlined">Choose your plan</button>
+      <section class="section hero">
+        <div class="container">
+          <div class="hero-inner">
+            <article class="tabs">
+              <ul class="tabs__btn list">
+                <li>
+                  <button
+                    class="btn tabs__btn-item tabs__btn-item--active"
+                    data-button="content-1"
+                    type="button"
+                  >
+                    Hosting
+                  </button>
+                </li>
+                <li>
+                  <button class="btn tabs__btn-item" data-button="content-2" type="button">
+                    Domain
+                  </button>
+                </li>
+                <li>
+                  <button class="btn tabs__btn-item" data-button="content-3" type="button">
+                    SEO
+                  </button>
+                </li>
+                <li>
+                  <button class="btn tabs__btn-item" data-button="content-4" type="button">
+                    Email
+                  </button>
+                </li>
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__content-item tabs__content-item--active" id="content-1">
+                  <h1 class="tabs__content-title">Premium Web Hosting for Your Website</h1>
+                  <p class="tabs__content-text">
+                    Blazing fast web hosting for individuals and businesses of all sizes backed by
+                    24x7x365 Support.
+                  </p>
+                  <div class="tabs__content-btns">
+                    <a class="tabs__content-btn tabs__content-btn--account" href="#">
+                      Create an Account
+                    </a>
+                    <a class="tabs__content-btn" href="#">Choose your plan</a>
+                  </div>
+                </div>
+                <div class="tabs__content-item color--red" id="content-2">
+                  <h1 class="tabs__content-title">Choose the Best Domain for Website</h1>
+                  <p class="tabs__content-text">
+                    Choose from 300 domain endings. We'll make sure you find the right domain.
+                  </p>
+                  <div class="tabs__content-btns">
+                    <a class="tabs__content-btn tabs__content-btn--account" href="#">Create an Account</a>
+                    <a class="tabs__content-btn" href="#">Choose your plan</a>
+                  </div>
+                </div>
+                <div class="tabs__content-item color--green" id="content-3">
+                  <h1 class="tabs__content-title">Get best optimization of Your Website</h1>
+                  <p class="tabs__content-text">
+                    With our 20-in-1 toolkit working behind the scenes, you’ll become an SEO
+                    rockstar.
+                  </p>
+                  <div class="tabs__content-btns">
+                    <a class="tabs__content-btn tabs__content-btn--account" href="#">Create an Account</a>
+                    <a class="tabs__content-btn" href="#">Choose your plan</a>
+                  </div>
+                </div>
+                <div class="tabs__content-item color--purple" id="content-4">
+                  <h1 class="tabs__content-title">Create Your Personal Business Email</h1>
+                  <p class="tabs__content-text">
+                    We will set up advertising and all functionality to your business email for
+                    communication with customers.
+                  </p>
+                  <div class="tabs__content-btns">
+                    <a class="tabs__content-btn tabs__content-btn--account" href="#">Create an Account</a>
+                    <a class="tabs__content-btn" href="#">Choose your plan</a>
+                  </div>
+                </div>
+              </div>
             </article>
-            <img src="./images/Group 6.png" alt="Hosting" width="501">
-        </section>
-        <section class="discription">
-            <h2>Why Us</h2>
-            <!--скрыть в css-->
-            <div class="top-content">
-                <article class="info">
-                    <h2>True Cloud Web Hosting</h2>
-                    <p>True Cloud Web Hosting All of the hosting packages we offer are deployed instantly on our SSD
-                        powered cloud. We don’t
-                        use dedicated servers that operate on single pieces of hardware. Our entire infrastructure is
-                        built to be reliable,
-                        secure, and scalable.</p>
-                </article>
-                <article class="clients">
-                    <img src="./images/panel.png" alt="panel">
-                    <img src="./images/360.png" alt="360">
-                    <img src="./images/litespeed.png" alt="litespeed">
-                    <img src="./images/soft.png" alt="soft">
-                    <img src="./images/wordpress.png" alt="wordpress">
-                    <img src="images/could.png" alt="could">
-                </article>
+            <div>
+              <img class="hero__img" src="images/girl.png" alt="Hosting" width="552" />
             </div>
-            <div class="preferences">
-                <article>
-                    <img src="./images/icn1 1.png" alt="clock">
-                    <h4>99.9% Uptime</h4>
-                    <p>We Keep Your Web build Online 24x7x365.
-                        Downtime not only costs you lost visitors but also damages your reputation and search engine
-                        rankings.</p>
-                </article>
-                <article>
-                    <img src="./images/Frame 1.png" alt="frame">
-                    <h4>Blazing Fast Web Hosting</h4>
-                    <p>We Keep Your Web build Online 24x7x365.
-                        Downtime not only costs you lost visitors but also damages your reputation and search engine
-                        rankings.</p>
-                </article>
-                <article>
-                    <img src="./images/icn4 1.png" alt="certificates">
-                    <h4>Free SSL Certificates</h4>
-                    <p>We Keep Your Web build Online 24x7x365.
-                        Downtime not only costs you lost visitors but also damages your reputation and search engine
-                        rankings.</p>
-                </article>
-                <article>
-                    <img src="./images/7 Icon.png" alt="support">
-                    <h4>24x7 Friendly Support</h4>
-                    <p>We Keep Your Web build Online 24x7x365.
-                        Downtime not only costs you lost visitors but also damages your reputation and search engine
-                        rankings.</p>
-                </article>
+          </div>
+        </div>
+      </section>
+      <section class="section description">
+        <div class="container description__container">
+          <h2 class="visually-hidden">Why Us</h2>
+          <div class="description__content">
+            <div class="description__inner">
+              <h2 class="section-title">True Cloud Web Hosting</h2>
+              <p class="section-text">
+                True Cloud Web Hosting All of the hosting packages we offer are deployed instantly
+                on our SSD powered cloud. We don’t use dedicated servers that operate on single
+                pieces of hardware. Our entire infrastructure is built to be reliable, secure, and
+                scalable.
+              </p>
             </div>
-        </section>
-        <section class="plan">
-            <h2>Ready to get started with
-                Lemon Wares?</h2>
-            <p>Choose the package that suits you</p>
-            <ul>
-                <li>
-                    <h3>Starter</h3>
-                    <p>with all your customers via all conversation channels in one central dashboard.</p>
-                    <p>$2.80</p>
-                    <p>Per month</p>
-                    <button>Choose this Plan</button>
-                    <ul>
-                        <li>2GB SSD</li>
-                        <li>10GB Bandwidth</li>
-                        <li>15 Email Accounts</li>
-                        <li>Unlimited Database</li>
-                        <li>4 Subdomains</li>
-                        <li>1 Parked Domain</li>
-                        <li>2 Websites</li>
-                        <li>Free SSL</li>
-                        <li>Softaculous</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Standard</h3>
-                    <p>with all your customers via all conversation channels in one central dashboard.</p>
-                    <p>$4.20</p>
-                    <p>Per month</p>
-                    <button>Choose this Plan</button>
-                    <ul>
-                        <li>2GB SSD</li>
-                        <li>10GB Bandwidth</li>
-                        <li>15 Email Accounts</li>
-                        <li>Unlimited Database</li>
-                        <li>4 Subdomains</li>
-                        <li>1 Parked Domain</li>
-                        <li>2 Websites</li>
-                        <li>Free SSL</li>
-                        <li>Softaculous</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Suprem</h3>
-                    <p>with all your customers via all conversation channels in one central dashboard.</p>
-                    <p>$7.00</p>
-                    <p>Per month</p>
-                    <button>Choose this Plan</button>
-                    <ul>
-                        <li>2GB SSD</li>
-                        <li>10GB Bandwidth</li>
-                        <li>15 Email Accounts</li>
-                        <li>Unlimited Database</li>
-                        <li>4 Subdomains</li>
-                        <li>1 Parked Domain</li>
-                        <li>2 Websites</li>
-                        <li>Free SSL</li>
-                        <li>Softaculous</li>
-                    </ul>
-                </li>
+            <ul class="clients list">
+              <li class="clients__item">
+                <img class="clients__img" src="images/panel.png" alt="panel" />
+              </li>
+              <li class="clients__item">
+                <img class="clients__img" src="images/360.png" alt="360" />
+              </li>
+              <li class="clients__item">
+                <img class="clients__img" src="images/litespeed.png" alt="litespeed" />
+              </li>
+              <li class="clients__item">
+                <img class="clients__img" src="images/soft.png" alt="soft" />
+              </li>
+              <li class="clients__item">
+                <img class="clients__img" src="images/wordpress.png" alt="wordpress" />
+              </li>
+              <li class="clients__item">
+                <img class="clients__img" src="images/could.png" alt="could" />
+              </li>
             </ul>
-        </section>
-        <!--Testimonials -->
-        <section class="testimonials ">
-            <!--h2 Testimonials убрать в css -->
-            <h2>Testimonials</h2>
-            <div class="testimonials-customers">
-                <article class="testimonials-info">
-                    <h2>Real Stories from Real Customers</h2>
-                    <img src="./images/QuoteMarkBig.png" alt="Quote Mark Big">
-                    <p>Get inspired by these stories.</p>
-                    <ul>
-                        <li>
-                            <img src="./images/CryptoLearn.png" alt="Crypto Learn">
-                            <img src="./images/QuoteMark.png" alt="Quote Mark Small">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-                                venenatis, lectus magna
-                                fringilla urna, porttitor rhoncus dolor purus non enim praesent elem</p>
-                            <h4>Floyd Miles</h4>
-                            <p>Vice President, CLI</p>
-                        </li>
-                        <li>
-                            <img src="./images/JerryPiping.png" alt="Jerry Piping">
-                            <img src="./images/QuoteMark.png" alt="Quote Mark Small">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-                                venenatis, lectus magna
-                                fringilla urna, porttitor rhoncus dolor purus non enim praesent elem</p>
-                            <h4>Jane Cooper</h4>
-                            <p>CEO, JPNL</p>
-                        </li>
-                        <li>
-                            <img src="./images/LeeveOn.png" alt="/Leeve On">
-                            <img src="./images/QuoteMark.png" alt="Quote Mark Small">
-                            <p>LemonWares saved our time in Hosting my company page.</p>
-                            <h4>Kristin Watson</h4>
-                            <p>Co-Founder, LeeveOn Branding</p>
-                        </li>
-                    </ul>
-                </article>
+          </div>
+          <ul class="preferences list">
+            <li class="preferences__item">
+              <img class="preferences__img" src="images/icon1.png" alt="clock" />
+              <h3 class="preferences__title">99.9% Uptime</h3>
+              <p class="preferences__text">
+                We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors
+                but also damages your reputation and search engine rankings.
+              </p>
+            </li>
+            <li class="preferences__item">
+              <img class="preferences__img" src="images/icon2.png" alt="frame" />
+              <h3 class="preferences__title">Blazing Fast Web Hosting</h3>
+              <p class="preferences__text">
+                We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors
+                but also damages your reputation and search engine rankings.
+              </p>
+            </li>
+            <li class="preferences__item">
+              <img class="preferences__img" src="images/icon3.png" alt="certificates" />
+              <h3 class="preferences__title">Free SSL Certificates</h3>
+              <p class="preferences__text">
+                We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors
+                but also damages your reputation and search engine rankings.
+              </p>
+            </li>
+            <li class="preferences__item">
+              <img class="preferences__img" src="images/icon4.png" alt="support" />
+              <h3 class="preferences__title">24x7 Friendly Support</h3>
+              <p class="preferences__text">
+                We Keep Your Web build Online 24x7x365. Downtime not only costs you lost visitors
+                but also damages your reputation and search engine rankings.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section pricing">
+        <div class="container">
+          <div class="pricing__header">
+            <h2 class="pricing__title">Ready to get started with Lemon Wares?</h2>
+            <p class="pricing__subtitle">Choose the package that suits you</p>
+            <div class="pricing__payment-period">
+              <button id="monthly" class="btn pricing__payment-period-subtitle selected">
+                Monthly
+              </button>
+              <input type="checkbox" id="checkbox" class="toggle-btn selected" checked />
+              <button id="yearly" class="btn pricing__payment-period-subtitle">
+                Yearly
+                <span class="pricing__discount">20% discount</span>
+              </button>
             </div>
-            <div class="testimonials-serve">
-                <article class="info-serve">
-                    <h2>We serve over 100
-                        Nigerian Websites</h2>
-                    <p>Connect LemonWares with your favourite tools that you use daily and keep things on track.</p>
-                </article>
-                <article class="clients-serve">
-                    <img src="./images/JerryPiping.png" alt="Jerry Piping">
-                    <img src="./images/KoraneScents.png" alt="Korane Scents">
-                    <img src="./images/NadineGhaida.png" alt="Nadine Ghaida">
-                    <img src="./images/LeeveOn.png" alt="Leeve On">
-                    <img src="./images/JrangoGlasses.png" alt="Jrango Glasses">
-                    <img src="./images/CryptoLearn.png" alt="CryptoLearn.png">
-                </article>
+            <div class="pricing__payment-type">
+              <button id="basic" class="btn pricing__payment-type-subtitle selected">Basic</button>
+              <button id="premium" class="btn pricing__payment-type-subtitle">Premium</button>
             </div>
-        </section>
-        <!--Call Us-->
-        <section>
-            <h2>We're here to make your website awesome.</h2>
-            <button type="button">
-                <img src="./images/whatsapp.png" alt="whatsapp">
-                <p>Get in touch with us</p>
-            </button>
-        </section>
-    </main>
-    <footer>
-        <a href="#">
-            <img src="./images/Rectangle 3.svg" alt="logo">
-        </a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus
-            magna
-            fringilla urna, porttitor rhoncus dolor purus non enim praesent elem</p>
-        <ul>
-            <li>
-                <h3>Service</h3>
-                <ul>
-                    <li>Domain</li>
-                    <li>Shared Hosting</li>
-                    <li>Cloud Hosting</li>
-                    <li>Private Hosting</li>
-                </ul>
+          </div>
+          <ul id="tariffA" class="list pricing__inner">
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Starter</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $2.80
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
             </li>
-            <li>
-                <h3>Hosting</h3>
-                <ul>
-                    <li>Cheap Hosting</li>
-                    <li>Hosting Wordpress</li>
-                    <li>Email Hosting</li>
-                    <li>Hosting Unlimited</li>
-                </ul>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Standard</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $4.20
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
             </li>
-            <li>
-                <h3>Company</h3>
-                <ul>
-                    <li>About</li>
-                    <li>Career</li>
-                    <li>Contact Us</li>
-                </ul>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Suprem</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $7.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
             </li>
-            <li>
-                <h3>Help</h3>
-                <ul>
-                    <li>FAQ</li>
-                    <li>Help support</li>
-                </ul>
+          </ul>
+          <ul id="tariffB" class="list pricing__inner hidden">
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Starter</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $20.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
             </li>
-        </ul>
-        <p>Built by Jeremiah with &#10084; in Lagos. &#169 2021</p>
-    </footer>
-</body>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Standard</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $40.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+              >
+            </li>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Suprem</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $70.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="tariffC" class="list pricing__inner hidden">
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Starter</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $12.80
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+            </li>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Standard</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $14.20
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+              >
+            </li>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Suprem</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $17.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+            </li>
+          </ul>
+          <ul id="tariffD" class="list pricing__inner hidden">
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Starter</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $60.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+            </li>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Standard</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $120.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+              >
+            </li>
+            <li class="pricing__card">
+              <h3 class="pricing__card-title">Suprem</h3>
+              <p class="pricing__card-description">
+                with all your customers via all conversation channels in one central dashboard.
+              </p>
+              <p class="pricing__card-price">
+                $170.00
+                <span>Per month</span>
+              </p>
+              <a href="#" class="pricing__card-btn">Choose this Plan</a>
+              <ul class="list pricing__profit-list">
+                <li class="pricing__profit-item">2GB SSD</li>
+                <li class="pricing__profit-item">10GB Bandwidth</li>
+                <li class="pricing__profit-item">15 Email Accounts</li>
+                <li class="pricing__profit-item">Unlimited Database</li>
+                <li class="pricing__profit-item">4 Subdomains</li>
+                <li class="pricing__profit-item">1 Parked Domain</li>
+                <li class="pricing__profit-item">2 Websites</li>
+                <li class="pricing__profit-item">Free SSL</li>
+                <li class="pricing__profit-item">Softaculous</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section testimonials">
+        <div class="container">
+          <h2 class="visually-hidden">Ours Testimonials</h2>
+          <div class="reviews-customers">
+            <ul class="list reviews__customers-list">
+              <li class="reviews__customers--first">
+                <h2 class="section-title">Real Stories from Real Customers</h2>
+                <p class="section-text">Get inspired by these stories.</p>
+              </li>
+              <li class="reviews__customers-item reviews__customers--second">
+                <img src="images/CryptoLearn.png" alt="Crypto Learn" />
+                <p class="reviews__customers-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
+                  luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non
+                  enim praesent elem
+                </p>
+                <h4 class="reviews__customers-name">Floyd Miles</h4>
+                <p class="reviews__customers-position">Vice President, CLI</p>
+              </li>
+              <li class="reviews__customers-item reviews__customers--third">
+                <img src="images/JerryPiping.png" alt="Jerry Piping" />
+                <p class="reviews__customers-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet
+                  luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non
+                  enim praesent elem
+                </p>
+                <h4 class="reviews__customers-name">Jane Cooper</h4>
+                <p class="reviews__customers-position">CEO, JPNL</p>
+              </li>
 
+              <li class="reviews__customers-item reviews__customers--fourth">
+                <img src="images/LeeveOn.png" alt="Leeve On" />
+                <p class="reviews__customers-text">
+                  LemonWares saved our time in Hosting my company page.
+                </p>
+                <h4 class="reviews__customers-name">Kristin Watson</h4>
+                <p class="reviews__customers-position">Co-Founder, LeeveOn Branding</p>
+              </li>
+            </ul>
+          </div>
+          <div class="ours-clients">
+            <div class="testimonials__info">
+              <h2 class="section-title">We serve over 100 Nigerian Websites</h2>
+              <p class="section-text">
+                Connect LemonWares with your favourite tools that you use daily and keep things on
+                track.
+              </p>
+            </div>
+            <ul class="list ours-clients__list">
+              <li class="ours-clients__item">
+                <img src="images/JerryPiping1.png" alt="Jerry Piping" />
+              </li>
+              <li class="ours-clients__item">
+                <img src="images/KoraneScents.png" alt="Korane Scents" />
+              </li>
+              <li class="ours-clients__item">
+                <img src="images/NadineGhaida.png" alt="Nadine Ghaida" />
+              </li>
+              <li class="ours-clients__item"><img src="images/LeeveOn.png" alt="Leeve On" /></li>
+              <li class="ours-clients__item">
+                <img src="images/JrangoGlasses.png" alt="Jrango Glasses" />
+              </li>
+              <li class="ours-clients__item">
+                <img src="images/CryptoLearn.png" alt="CryptoLearn.png" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="call-to-action">
+        <div class="container">
+          <div class="call-to-action__inner">
+            <img
+              src="images/triangletop.png"
+              alt="triangle decoration icon"
+              class="call-to-action__img call-to-action__img--top"
+            />
+            <img
+              src="images/triangletop.png"
+              alt="triangle decoration icon"
+              class="call-to-action__img call-to-action__img--left"
+            />
+            <img
+              src="images/triangleright.png"
+              alt="triangle decoration icon"
+              class="call-to-action__img call-to-action__img--right"
+            />
+            <h2 class="call-to-action__title">We're here to make your website awesome.</h2>
+            <a class="call-to-action__btn" href="#">
+              <svg class="call-to-action__btn-icon" width="25" height="25">
+                <use href="images/sprite.svg#whatsapp"></use>
+              </svg>
+              Get in touch with us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <ul class="list footer__list">
+                    <li class="footer__item--first">
+                        <a class="footer__logo" href="#">
+                        <img src="images/logowhite.svg" alt="logo">
+                    </a>
+                    <p class="footer__info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus
+                        magna
+                        fringilla urna, porttitor rhoncus dolor purus non enim praesent elem</p>
+                    </li>
+                    <li class="footer__item">
+                        <h3 class="footer__subtitle">Service</h3>
+                            <a class="footer__link" href="#">Domain</a>
+                            <a class="footer__link" href="#">Shared Hosting</a>
+                            <a class="footer__link" href="#">Cloud Hosting</a>
+                            <a class="footer__link" href="#">Private Hosting</a>
+                    </li>
+                    <li class="footer__item">
+                        <h3 class="footer__subtitle">Hosting</h3>
+                        <a class="footer__link" href="#">Cheap Hosting</a>
+                        <a class="footer__link" href="#">Hosting Wordpress</a>
+                        <a class="footer__link" href="#">Email Hosting</a>
+                        <a class="footer__link" href="#">Hosting Unlimited</a>
+                    </li>
+                    <li class="footer__item">
+                        <h3 class="footer__subtitle">Company</h3>
+                        <a class="footer__link" href="#">About</a>
+                        <a class="footer__link" href="#">Career</a>
+                        <a class="footer__link" href="#">Contact Us</a>
+                    </li>
+                    <li class="footer__item">
+                        <h3 class="footer__subtitle">Help</h3>
+                        <a class="footer__link" href="#">FAQ</a>
+                        <a class="footer__link" href="#"p>Help support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                <p class="footer__copyright-text">Built by Jeremiah with &#10084; in Lagos. &#169 2021</p>
+                <p class="footer__copyright-text">2024 │ Developed by Alesha74111</p>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+    
+   </div>
+   <script src="js/script.js"></script>
+    <script src="js/checkbox.js"></script>
+  </body>
 </html>
