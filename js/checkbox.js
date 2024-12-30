@@ -2,15 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const checkbox = document.getElementById('checkbox');
   const monthly = document.getElementById('monthly');
   const yearly = document.getElementById('yearly');
-  // const basic = document.getElementById('basic');
-  // const premium = document.getElementById('premium');
-  // const tariffA = document.getElementById('tariffA');
-  // const tariffB = document.getElementById('tariffB');
-  // const tariffC = document.getElementById('tariffC');
-  // const tariffD = document.getElementById('tariffD');
-
-  // Функция для обновления стилей при клике на чекбокс
-    checkbox.addEventListener('click', function () {
+  checkbox.addEventListener('click', function () {
       checkbox.classList.toggle('selected');
     if (checkbox.checked) {
       monthly.classList.add('selected');
@@ -18,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       monthly.classList.remove('selected');
       yearly.classList.add('selected');
-      
-    }
+   }
     updateTextVisibility()
   });
   yearly.addEventListener('click', function () {
@@ -29,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     checkbox.checked = false;
     updateTextVisibility()
   });
-  // Функция для обновления стилей при клике на кнопку A
   monthly.addEventListener('click', function () {
     monthly.classList.add('selected');
     yearly.classList.remove('selected');
@@ -49,7 +39,6 @@ const basic = document.getElementById('basic');
     premium.classList.remove('selected');
     updateTextVisibility()
   });
-  
   premium.addEventListener('click', function () {
     premium.classList.add('selected');
     basic.classList.remove('selected');
